@@ -43,21 +43,42 @@
     margin: 5px;
   }
 div{
-    padding: 5px;
+    margin: 10px;
     
 }
 
+input:hover {
+ background-color: blue;
+}
+
+p{
+  margin: 0;
+}
 fieldset{
     border:10px solid #0024d6;
-    border-radius: 30px;
-    width:
+    background-color: lavender;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    width: 720px;
 }
   legend {
     border-style: ridge;
     outline-style:ridge;
+    border-radius: 10px;
     outline-color: purple;
     border-radius: 10px;
-    padding: 5px;
+    padding: 12px;
     color: white;
     background-color: purple
   }
+
+ label{
+  display: inline-block;
+  text-align: right;
+  vertical-align: top;
+  width: 200px;
+ } 
+body{
+  width: 50%;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+}

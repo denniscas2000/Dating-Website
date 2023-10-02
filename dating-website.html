@@ -10,10 +10,11 @@
         <div>
             <fieldset>
               <legend>Your Face</legend>
-              <p>Upload Your Image : </p>
             <form action="https://us-central1-nucamp-production.cloudfunctions.net/post/formdata">
-                <input type="file" id="myFile" name="filename">
+                <label for="avatar">Upload Your Image</label>              
+                <input type="file" id="avatar" name="avatar">
             <p>Image Preview:</p>
+            <img id="preview" alt="profile picture" width="500">
             </form>
             </fieldset>
         </div>
@@ -23,15 +24,15 @@
               <form action="/action_page.php" method="get" name="myForm">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name"><br><br>
-                <label for="gender">Gender:</label>
-                <input type="radio" name="gender" value="male"> Male
-                <input type="radio" name="gender" value="female"> Female <br><br>
+                <label>Gender:</label>
+                <input type="radio" id="men" name="gender" value="male"> Male
+                <input type="radio" id="woman" name="gender" value="woman"> Woman <br><br>
                 <label for="age">Age:</label>
                 <input type="number" id="age" name="age" min="0" max="999"><br><br>
-                <label for="DOB">Date of Birth:</label>
-                <input type="month" id="bdaymonth" name="bdaymonth"><br><br>
+                <label>Date of Birth:</label>
+                <input type="date" id="dob" name="dob"><br><br>
                 <label for="color">Favorite Color:</label>
-                <input type="color" id="fcolor" name="fcolor"><br><br>
+                <input type="color" id="color" name="color"><br><br>
                 <label for="country">Country:</label>
                 <select id="country" name="country" class="form-control">
                     <option value="Afghanistan">Afghanistan</option>
@@ -280,11 +281,9 @@
                     <option value="Zimbabwe">Zimbabwe</option>
                 </select><br><br>
                 <label for="salary">Salary:</label>
-                <div class="slidecontainer">
-                    <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-                  </div>
-                
-
+                <span style class="range-caption">Poor</span>
+                  <input type="range" id="salary" name="salary" min="0" max="100" value="50" >
+                  <span style class="range-caption">Rich</span>
               </form>
             </fieldset>
         </div>
@@ -293,14 +292,17 @@
               <legend>Your Contact Information</legend>
               <form>
                 <label for="email">Email:</label>
-                <input type="text" id="email" name="email"><br><br>
-                <label for="Phone">Phone Number:</label>
-                <input type="text" id="phonenumber" name="phonenumber"><br><br>
+                <input type="email" id="email" name="email"><br><br>
+                <label>Phone:</label>
+                <input type="tel" id="phone" name="phone"><br><br>
                 <label for="address">Address:</label>
-                <input type="text" id="address" name="address"><br><br>
-                <label for="cmethod">Contact Method(s):</label>
-                <input type="radio" name="cmethod" value="email"> Email
-                <input type="radio" name="cmethod" value="phone"> Phone <br><br>
+                <textarea cols="40" id="address" name="address">
+                </textarea>
+              <div>
+                <label>Contact Method(s):</label>
+                <input type="checkbox" id="emailCheckbox" name="contact" value="email"> Email
+                <input type="checkbox" name="contact" id="phoneCheckbox" value="phone"> Phone <br><br>
+              </div>
               </form>
             </fieldset>
         </div>
@@ -309,4 +311,5 @@
                 <input type="submit" id="finalsubmit" value="Submit">
             </form>
         </div>
+      <script src="https://url.nucamp.co/datingjs"></script>
 </body>
